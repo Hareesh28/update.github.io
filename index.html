@@ -59,10 +59,9 @@
             cursor: pointer;
         }
 
-        /* Add a specific style for the search button */
-        button.search-button {
-            color: white;
-            background-color: #007bff;
+        .filter button {
+            color: #333; /* Set the text color for better contrast */
+            background-color: #007bff; /* Adjust the background color for better contrast */
         }
     </style>
 </head>
@@ -81,8 +80,7 @@
         <div class="filter">
             <label for="search">Search:</label>
             <input type="text" id="search" placeholder="Search..." fdprocessedid="08etql">
-            <!-- Use a specific class for the search button -->
-            <button class="search-button" onclick="search()" fdprocessedid="pk4pe">Search</button>
+            <button onclick="search()" fdprocessedid="pk4pe">Search</button>
         </div>
 
         <div class="advertisement">
