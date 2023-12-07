@@ -10,7 +10,6 @@
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
-            color: #333; /* Set the default text color */
         }
 
         header {
@@ -25,12 +24,6 @@
             color: white;
             padding: 10px;
             text-align: center;
-        }
-
-        nav a {
-            color: white; /* Set the link color in the navigation */
-            text-decoration: none;
-            margin: 0 10px;
         }
 
         section {
@@ -54,16 +47,15 @@
 
         button {
             padding: 10px;
+            background-color: #007bff;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            background-color: #007bff; /* Set a default background color for buttons */
-            color: white; /* Set a default text color for buttons */
         }
 
-        /* Override the style for the specific button with inline style */
-        button[fdprocessedid="pk4pe"] {
-            background-color: rgb(0, 123, 255);
+        .filter {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -80,16 +72,29 @@
 
     <section>
         <div class="filter">
-            <label for="search">Search:</label>
-            <input type="text" id="search" placeholder="Search..." fdprocessedid="08etql">
-            <button onclick="search()" fdprocessedid="pk4pe">Search</button>
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+            </select>
+
+            <label for="sort">Sort By:</label>
+            <select id="sort">
+                <option value="latest">Latest</option>
+                <option value="popular">Popular</option>
+            </select>
+
+            <input type="text" placeholder="Search...">
+            <button onclick="search()">Search</button>
         </div>
 
         <div class="advertisement">
             <img src="advertisement_image.jpg" alt="Advertisement Image">
             <h2>Product Title</h2>
             <p>Description of the product goes here.</p>
-            <button fdprocessedid="yzb2frj">Learn More</button>
+            <button style="background-color: #007bff; color: #fff;">Learn More</button>
         </div>
 
         <!-- Add more advertisements here -->
